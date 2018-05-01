@@ -1,0 +1,3 @@
+docker build -t catcatio/chatbot .
+docker run --rm catcatio/chatbot
+docker images | grep catcatio/chatbot

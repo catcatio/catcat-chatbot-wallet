@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  chatbot:
+    container_name: chatbot
+    env_file: .env
+    environment:
+      - PORT=${PORT:-9090}
+    image: catcatio/chatbot
+    ports:
+      - "${PORT:-9090}:${PORT:-9090}"
+    volumes:
+      - ./.env:/app/.env
+      - ./:/app
+    # working_dir: /app
+    # command: glide update && fresh -c runner.conf main.go

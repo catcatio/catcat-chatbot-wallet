@@ -1,0 +1,2 @@
+# scp -r ./ root@catcat.io:~/chatbot/
+scp main.go root@catcat.io:~/chatbot

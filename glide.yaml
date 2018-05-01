@@ -1,0 +1,5 @@
+package: .
+import:
+- package: github.com/leboncoin/dialogflow-go-webhook
+  subpackages:
+  - models
