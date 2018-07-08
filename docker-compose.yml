@@ -12,4 +12,4 @@ services:
     volumes:
       - ./:/go/src/app
     working_dir: /go/src/app
-    command: bash -c "cd /go/src/app && cd /go/src/app && glide init --non-interactive && glide update && fresh -c runner.conf main.go"
+    command: bash -c "cd /go/src/app && glide init --non-interactive && glide update && fresh -c runner.conf main.go"

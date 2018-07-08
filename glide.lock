@@ -1,6 +1,16 @@
-hash: 531abd7419b96e607f902f727a9c57e341444b549482874585da91ca508f990f
-updated: 2018-07-08T02:53:31.6740823Z
+hash: baedf115e002d7e955c0cfbcfde5d242b7e2066e9a117e4ba1ab370fd7e4c262
+updated: 2018-07-08T03:11:27.2671649Z
 imports:
+- name: github.com/agl/ed25519
+  version: 278e1ec8e8a6e017cd07577924d6766039146ced
+  repo: https://github.com/agl/ed25519
+  subpackages:
+  - edwards25519
+- name: github.com/davecgh/go-spew
+  version: 5215b55f46b2b919f50a1df0eaa5886afe4e3b3d
+  repo: https://github.com/davecgh/go-spew
+  subpackages:
+  - spew
 - name: github.com/gin-contrib/sse
   version: 22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae
 - name: github.com/gin-gonic/gin
@@ -9,6 +19,9 @@ imports:
   - binding
   - json
   - render
+- name: github.com/go-errors/errors
+  version: a41850380601eeb43f4350f7d17c6bbd8944aaf8
+  repo: https://github.com/go-errors/errors
 - name: github.com/golang/protobuf
   version: 1325a051a2753cd67556b182843b1b693d0854cd
   subpackages:
@@ -17,12 +30,72 @@ imports:
   version: ab8a2e0c74be9d3be70b3184d9acc634935ded82
 - name: github.com/leboncoin/dialogflow-go-webhook
   version: c8e0c0e07f9a9bc9a2d9000be2c04b65960b8cc8
+- name: github.com/lib/pq
+  version: 50761b0867bd1d9d069276790bcd4a3bccf2324a
+  repo: https://github.com/lib/pq
+  subpackages:
+  - oid
+- name: github.com/manucorporat/sse
+  version: ee05b128a739a0fb76c7ebd3ae4810c1de808d6d
+  repo: https://github.com/manucorporat/sse
 - name: github.com/mattn/go-isatty
   version: 6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c
 - name: github.com/modern-go/concurrent
   version: bacd9c7ef1dd9b15be4a9909b8ac7a4e313eec94
 - name: github.com/modern-go/reflect2
   version: 4b7aa43c6742a2c18fdef89dd197aaae7dac7ccd
+- name: github.com/nullstyle/go-xdr
+  version: a875e7c9fa2388ce03279f6b5ba1c2ccd1f9e917
+  repo: https://github.com/nullstyle/go-xdr
+  subpackages:
+  - xdr3
+- name: github.com/pkg/errors
+  version: 645ef00459ed84a119197bfb8d8205042c6df63d
+  repo: https://github.com/pkg/errors
+- name: github.com/pmezard/go-difflib
+  version: 792786c7400a136282c1664665ae0a8db921c6c2
+  repo: https://github.com/pmezard/go-difflib
+  subpackages:
+  - difflib
+- name: github.com/segmentio/go-loggly
+  version: eb91657e62b25699dd4e84d5562735440d4beace
+  repo: https://github.com/segmentio/go-loggly
+- name: github.com/sirupsen/logrus
+  version: 68cec9f21fbf3ea8d8f98c044bc6ce05f17b267a
+  repo: https://github.com/sirupsen/logrus
+  subpackages:
+  - hooks/test
+- name: github.com/stellar/go
+  version: 49a0d85c4217dc38f7576c058e31a8653b2f20b2
+  subpackages:
+  - amount
+  - build
+  - clients/horizon
+  - crc16
+  - hash
+  - keypair
+  - network
+  - price
+  - protocols/horizon
+  - protocols/horizon/base
+  - strkey
+  - support/errors
+  - support/http/mutil
+  - support/log
+  - support/render/hal
+  - support/render/problem
+  - support/url
+  - xdr
+- name: github.com/stretchr/objx
+  version: 1a9d0bb9f541897e62256577b352fdbc1fb4fd94
+  repo: https://github.com/stretchr/objx
+- name: github.com/stretchr/testify
+  version: 976c720a22c8eb4eb6a0b4348ad85ad12491a506
+  repo: https://github.com/stretchr/testify
+  subpackages:
+  - assert
+  - mock
+  - require
 - name: github.com/ugorji/go
   version: 7d51bbe6161dcb8f32a1252c27668ce36e3ef16b
   subpackages:
@@ -34,5 +107,6 @@ imports:
 - name: gopkg.in/go-playground/validator.v8
   version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
 - name: gopkg.in/yaml.v2
-  version: 5420a8b6744d3b0345ab293f6fcba19c978f1183
+  version: 7ad95dd0798a40da1ccdff6dff35fd177b5edf40
+  repo: https://gopkg.in/yaml.v2
 testImports: []

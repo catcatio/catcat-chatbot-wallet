@@ -10,10 +10,12 @@ RUN mkdir -p $$GOPATH/bin && \
   go get github.com/pilu/fresh
 
 # define work directory
-ADD . /go/src/app
-RUN cd /go/src/app && glide init --non-interactive && glide update
-
 WORKDIR /go/src/app
+
+COPY ./runner.conf ./runner.conf
+COPY ./main.go ./main.go
+
+RUN glide init --non-interactive && glide update
 
 # RUN go build -o goapp
 
