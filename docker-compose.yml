@@ -10,6 +10,10 @@ services:
     ports:
       - "${PORT:-9090}:${PORT:-9090}"
     volumes:
-      - ./:/go/src/app
+      - ./tmp:/go/src/app/tmp
+      - ./main.go:/go/src/app/main.go
     working_dir: /go/src/app
+    # Use this for first init
     command: bash -c "cd /go/src/app && glide init --non-interactive && glide update && fresh -c runner.conf main.go"
+    # Use this forfaster speed after init
+    # command: bash -c "fresh -c runner.conf main.go"
