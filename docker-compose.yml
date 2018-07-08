@@ -10,7 +10,6 @@ services:
     ports:
       - "${PORT:-9090}:${PORT:-9090}"
     volumes:
-      - ./.env:/app/.env
-      - ./:/app
-    # working_dir: /app
-    # command: glide update && fresh -c runner.conf main.go
+      - ./:/go/src/app
+    working_dir: /go/src/app
+    command: bash -c "cd /go/src/app && cd /go/src/app && glide init --non-interactive && glide update && fresh -c runner.conf main.go"

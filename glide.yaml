@@ -1,5 +1,4 @@
-package: .
+package: app
 import:
+- package: github.com/gin-gonic/gin
 - package: github.com/leboncoin/dialogflow-go-webhook
-  subpackages:
-  - models

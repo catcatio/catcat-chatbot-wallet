@@ -57,7 +57,9 @@ func webhook(c *gin.Context) {
 }
 
 func main() {
-	fmt.Println("v3")
+	fmt.Println("🚀 v4")
+
+	//foo()
 
 	r := gin.Default()
 

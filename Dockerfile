@@ -7,17 +7,17 @@ RUN apk add --update tzdata \
 # Create binary directory, install glide and fresh
 RUN mkdir -p $$GOPATH/bin && \
   curl https://glide.sh/get | sh && \
-  go get github.com/pilu/fresh && \
-  go get github.com/leboncoin/dialogflow-go-webhook && \
-  go get github.com/gin-gonic/gin
+  go get github.com/pilu/fresh
 
 # define work directory
-ADD . /app
-WORKDIR /app
+ADD . /go/src/app
+RUN cd /go/src/app && glide init --non-interactive && glide update
 
-RUN go build -o goapp
+WORKDIR /go/src/app
 
-VOLUME ["/app"]
+# RUN go build -o goapp
+
+VOLUME ["/go/src/app"]
 
 # serve the app
-CMD glide update && fresh -c runner.conf main.go
+# CMD glide update && fresh -c runner.conf main.go
