@@ -12,7 +12,7 @@ services:
     volumes:
       - ./tmp:/go/src/app/tmp
       - ./main.go:/go/src/app/main.go
-      - ./vendor:/go/src/app/vendor
+      - ./vendor/github.com/catcatio:/go/src/app/vendor/github.com/catcatio
     working_dir: /go/src/app
     # Use this for first init
     # command: bash -c "cd /go/src/app && glide init --non-interactive && glide update && fresh -c runner.conf main.go"
