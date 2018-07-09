@@ -12,8 +12,9 @@ services:
     volumes:
       - ./tmp:/go/src/app/tmp
       - ./main.go:/go/src/app/main.go
+      - ./vendor:/go/src/app/vendor
     working_dir: /go/src/app
     # Use this for first init
-    command: bash -c "cd /go/src/app && glide init --non-interactive && glide update && fresh -c runner.conf main.go"
+    # command: bash -c "cd /go/src/app && glide init --non-interactive && glide update && fresh -c runner.conf main.go"
     # Use this forfaster speed after init
-    # command: bash -c "fresh -c runner.conf main.go"
+    command: bash -c "fresh -c runner.conf main.go"

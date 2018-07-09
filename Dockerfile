@@ -19,7 +19,7 @@ RUN glide init --non-interactive && glide update
 
 # RUN go build -o goapp
 
-VOLUME ["/go/src/app"]
+# VOLUME ["/go/src/app"]
 
 # serve the app
 # CMD glide update && fresh -c runner.conf main.go

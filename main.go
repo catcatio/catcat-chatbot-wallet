@@ -9,6 +9,8 @@ import (
 
 	b "github.com/stellar/go/build"
 	"github.com/stellar/go/clients/horizon"
+
+	"github.com/catcatio/wallet"
 )
 
 type params struct {
@@ -97,6 +99,7 @@ func main() {
 	fmt.Println("🚀 v3")
 
 	foo()
+	wallet.Bar()
 
 	r := gin.Default()
 
